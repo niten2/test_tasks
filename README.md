@@ -1,4 +1,4 @@
-# Tacks
+# Примеры тестовых заданий для устройства на работу
 
 - [Browser Game](https://github.com/niten2/test_tasks/tree/master/browser_game)
 - [Todo App](https://github.com/niten2/test_tasks/tree/master/todo_app)
@@ -6,4 +6,11 @@
 - [News Portal](https://github.com/niten2/test_tasks/tree/master/news_portal)
 - [Credit Site](https://github.com/niten2/test_tasks/tree/master/credit_site)
 - [SPA](https://github.com/niten2/test_tasks/tree/master/spa)
+
+## READY
+
+- [Test Task Loans](https://github.com/niten2/test_tasks/tree/master/test_task_loans)
+- [Test Task Api](https://github.com/niten2/test_tasks/tree/master/test_task_api)
+- [Tutu Clone](https://github.com/niten2/test_tasks/tree/master/tutu_clone)
+
 
