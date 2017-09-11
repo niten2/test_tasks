@@ -1,7 +1,7 @@
 # Приложение для выдачи кредитов.
 
-Пример кода: https://github.com/niten2/test_task_loans
-Демо версия здесь: test-task-loans.herokuapp.com
+- Пример кода: https://github.com/niten2/test_task_loans
+- Демо версия здесь: http://test-task-loans.herokuapp.com
 
 ## Техническое задание:
 
