@@ -36,4 +36,4 @@
 
 Реализовать с применением MVC-паттерна.
 
-- [Back](https://github.com/niten2/test_tasks)
+[Back](https://github.com/niten2/test_tasks)
