@@ -13,3 +13,4 @@
 - [Test Task Api](https://github.com/niten2/test_tasks/tree/master/test_task_api)
 - [Tutu Clone](https://github.com/niten2/test_tasks/tree/master/tutu_clone)
 - [Test Task Work](https://github.com/niten2/test_tasks/tree/master/test_task_work)
+- [Blackjack Game](https://github.com/niten2/test_tasks/tree/master/blackjack_game)
