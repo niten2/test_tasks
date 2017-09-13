@@ -1,9 +1,8 @@
 # Нужно выяснить что здесь сломано
 Slomux это реализация Flux
 
-пример кода: https://github.com/niten2/test_tasks/blob/master/fix_slomux/ready.js
-пулл реквест и изменениями: https://github.com/niten2/test_tasks/pull/1/files
-
+- пример кода: https://github.com/niten2/test_tasks/blob/master/fix_slomux/ready.js
+- пулл реквест и изменениями: https://github.com/niten2/test_tasks/pull/1/files
 
 ```
   const createStore = (reducer, initialState) => {
