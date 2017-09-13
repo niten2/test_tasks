@@ -6,6 +6,7 @@
 - [News Portal](https://github.com/niten2/test_tasks/tree/master/news_portal)
 - [Credit Site](https://github.com/niten2/test_tasks/tree/master/credit_site)
 - [SPA](https://github.com/niten2/test_tasks/tree/master/spa)
+- [Fix Slomux](https://github.com/niten2/test_tasks/tree/master/fix_slomux)
 
 ## READY
 
