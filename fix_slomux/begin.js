@@ -127,7 +127,7 @@ class ToDoComponent extends React.Component {
     // что создание задачи без названия в данном контексте нелогично
     // также можно добавить action
     // для вывода сообщения о необходимости ввести текс в поле
-    if (todoText != "") {
+    if (todoText !== "") {
       this.props.addTodo(todoText)
     }
 
