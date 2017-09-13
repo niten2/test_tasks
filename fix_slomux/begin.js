@@ -84,8 +84,8 @@ class ToDoComponent extends React.Component {
     todoText: ''
   }
 
+  // NOTE Each child in an array or iterator should have a unique "key" prop
   render() {
-    // NOTE Each child in an array or iterator should have a unique "key" prop
     return (
       <div>
         <label>{this.props.title || 'Без названия'}</label>
