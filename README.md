@@ -6,7 +6,6 @@
 - [News Portal](https://github.com/niten2/test_tasks/tree/master/news_portal)
 - [Credit Site](https://github.com/niten2/test_tasks/tree/master/credit_site)
 - [SPA](https://github.com/niten2/test_tasks/tree/master/spa)
-- [Fix Slomux](https://github.com/niten2/test_tasks/tree/master/fix_slomux)
 
 ## READY
 
@@ -15,3 +14,4 @@
 - [Tutu Clone](https://github.com/niten2/test_tasks/tree/master/tutu_clone)
 - [Test Task Work](https://github.com/niten2/test_tasks/tree/master/test_task_work)
 - [Blackjack Game](https://github.com/niten2/test_tasks/tree/master/blackjack_game)
+- [Fix Slomux](https://github.com/niten2/test_tasks/tree/master/fix_slomux)
