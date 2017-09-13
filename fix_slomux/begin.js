@@ -1,6 +1,3 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-
 const createStore = (reducer, initialState) => {
   let currentState = initialState
   const listeners = []
@@ -83,7 +80,6 @@ const reducer = (state = [], action) => {
 
 // components
 class ToDoComponent extends React.Component {
-
   state = {
     todoText: ''
   }
@@ -141,19 +137,17 @@ class ToDoComponent extends React.Component {
   }
 }
 
-const ToDo = connect(
-  state => ({
-    todos: state,
-  }),
-  dispatch => ({
-    addTodo: text => dispatch(addTodo(text)),
-  })
-)(ToDoComponent)
+const ToDo = connect(state => ({
+  todos: state,
+}),
+dispatch => ({
+  addTodo: text => dispatch(addTodo(text)),
+}))(ToDoComponent)
 
 // init
 ReactDOM.render(
   <Provider store={createStore(reducer, [])}>
     <ToDo title="Список задач"/>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('app')
 )
