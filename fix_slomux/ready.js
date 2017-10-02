@@ -14,8 +14,7 @@ const createStore = (reducer, initialState) => {
   return { getState, dispatch, subscribe }
 }
 
-const connect = (mapStateToProps, mapDispatchToProps) =>
-  Component => {
+const connect = (mapStateToProps, mapDispatchToProps) => Component => {
     // NOTE В компоненте Provider store является глобальным обьектом
     // поэтому необходимо добавить window
 
