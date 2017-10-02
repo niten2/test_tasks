@@ -56,6 +56,6 @@
 
 После этого Администратор авторизуется в системе и видит следующую информацию:
 
-[image]: https://github.com/niten2/test_tasks/blob/master/stock/image.png
+![image](https://github.com/niten2/test_tasks/blob/master/stock/image.png)
 
 [Back](https://github.com/niten2/test_tasks)
