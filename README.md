@@ -1,5 +1,8 @@
 # Примеры тестовых заданий для устройства на работу
 
+## Development stage
+
+- [Admit Taks](https://github.com/niten2/test_tasks/tree/master/admit_taks)
 - [Browser Game](https://github.com/niten2/test_tasks/tree/master/browser_game)
 - [Todo App](https://github.com/niten2/test_tasks/tree/master/todo_app)
 - [Test task ruby](https://github.com/niten2/test_tasks/tree/master/test_task_ruby)
@@ -7,8 +10,9 @@
 - [Credit Site](https://github.com/niten2/test_tasks/tree/master/credit_site)
 - [SPA](https://github.com/niten2/test_tasks/tree/master/spa)
 - [Stock](https://github.com/niten2/test_tasks/tree/master/stock)
+- [Share Price](https://github.com/niten2/test_tasks/tree/master/share_price)
 
-## READY
+## Ready stage
 
 - [Test Task Loans](https://github.com/niten2/test_tasks/tree/master/test_task_loans)
 - [Test Task Api](https://github.com/niten2/test_tasks/tree/master/test_task_api)
