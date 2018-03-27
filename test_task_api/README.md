@@ -101,4 +101,4 @@ POST /api/v1/reports/by_author.json
 Для этого задания нужно заполнить базу тестовыми данными использовать gem faker.
 Результат нужно разместить на github.
 
-[Back](https://github.com/niten2/test_tasks)
+[Back](https://github.com/niten2/todo_test_tasks)
