@@ -1,7 +1,6 @@
 # Test Task Work
 
-- Пример кода: https://github.com/niten2/test_task_work
-- Демо версия: http://test-task-work.herokuapp.com
+Example: https://github.com/niten2/test_task_work
 
 ## Задание включает в себя:
 

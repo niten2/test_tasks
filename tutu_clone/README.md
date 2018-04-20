@@ -1,7 +1,6 @@
 # Tutu Clone
 
-- Пример кода: https://github.com/niten2/tutu_clone
-- Демо версия: tutu-clone-thinknetica.herokuapp.com
+Example: https://github.com/niten2/tutu_clone
 
 ## В процессе были выполнить следующие действия:
 
