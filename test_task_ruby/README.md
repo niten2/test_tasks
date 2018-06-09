@@ -75,4 +75,4 @@ When performing a test task, it is MANDATORY:
   - Capybara helps you test your web applications by simulating how a real user will interact with the application.
   - Also include the application to Travis CI
 
-[Back] (https://github.com/niten2/test_tasks)
+[Back](https://github.com/niten2/test_tasks)

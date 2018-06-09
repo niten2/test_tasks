@@ -14,4 +14,4 @@ Example: https://github.com/niten2/test_task_work
 
 In the project used: Devise, Faker, Rspec, Capybara, Ajax
 
-[Back] (https://github.com/niten2/test_tasks)
+[Back](https://github.com/niten2/test_tasks)

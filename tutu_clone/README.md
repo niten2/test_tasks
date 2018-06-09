@@ -68,3 +68,5 @@ In the process, the following actions were performed:
   - The administrator can view the list of all tickets in the system, each individually, edit tickets and delete them.
 
   - When registering the user, his name and surname are requested and after login, "Hello, <username>!"
+
+[Back](https://github.com/niten2/test_tasks)
