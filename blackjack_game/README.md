@@ -1,29 +1,37 @@
-# Игра Блэкджэк
+# Playing Blackjack
 
-- Пример кода: https://github.com/niten2/learn_thinknetica_ruby/tree/master/blackjack_game_ruby
+Sample code: https://github.com/niten2/learn_thinknetica_ruby/tree/master/blackjack_game_ruby
 
-Механика (правила игры):
+#### Mechanics (rules of the game):
 
-Есть игрок (пользователь) и дилер (управляется программой). Вначале, запрашиваем у пользователя имя после чего, начинается игра. При начале игры у пользователя и дилера в банке находится 100 долларов Пользователю выдаются случайные 2 карты, которые он видит (карты указываем условными обозначениями, например, «К+» - король крестей, «К<3» - король черв, «К^» - король пик, «К<>» - король бубен и т.д.)
-Также 2 случайные карты выдаются «дилеру», против которого играет пользователь. Пользователь не видит карты дилера, вместо них показываются звездочки.
-Также пользователь видит сумму своих очков. Сумма считается по номианлу карт: от 2 до 10 - по номиналу, все «картинки» - по 10, туз - 1 или 11, в зависимости от того, какое значение будет ближе к 21 и что не ведет к проигрышу (сумме более 21).
-После раздачи, автоматически делается ставка в банк игры в размере 10 долларов от игрока и диллера. (У игрока и дилера вычитается 10 из банка)
-После раздачи, ход переходит пользователю. У пользователя есть на выбор 3 варианта:
+  - There is a player (user) and a dealer (managed by the program). First, we ask the user for the name after which the game begins. At the beginning of the game, the user and the dealer have 100 dollars in the bank. The user receives a random 2 cards that he sees (maps are indicated by conventional symbols, for example, "K +" - king of crosses, "K <3" - king of hearts, "K ^" - king of spades, "K <>" - King of diamonds, etc.)
 
-Пропустить. В этом случае, ход переходит к дилеру (см. ниже)
-Добавить карту. (только если у пользователя на руках 2 карты). В этом случае игроку добавляется еще одна случайная карта, сумма очков пересчитывается, ход переходит дилеру. Может быть добавлена только одна карта.
-Открыть карты. Открываются карты дилера и игрока, игрок видит сумму очков дилера, идет подсчет результатов игры (см. ниже). Ход дилера. Дилер может:
-Пропустить ход. Ход переходит игроку. Используется, если сумма очков дилера выше 18.
+  - Also, 2 random cards are issued to the "dealer" against which the user plays. The user does not see the dealer's card, instead, they are shown with asterisks.
 
-Добавить карту. У дилера появляется новая карта (для пользователя закрыта). Используется, если сумма очков ниже 18. После этого ход переходит игроку. Может быть добавлена только одна карта.
+  - Also, the user sees the number of his points. The amount is considered by the nominal of cards: from 2 to 10 - at face value, all "pictures" - by 10, ace - 1 or 11, depending on what value will be closer to 21 and that does not lead to a loss (more than 21).
 
-Игроки вскрывают карты либо по достижению у них по 3 карты, либо когда пользователь выберет вариант «Открыть карты». После этого пользователь видит карты дилера и сумму его очков, а также результат игры (кто выиграл и кто проиграл).
+  - After the hand is distributed, a bet of $ 10 from the player and the dealer is automatically made. (The player and the dealer are deducted 10 from the bank)
 
-Подсчет результатов:
+  - After distribution, the motion passes to the user. The user has a choice of 3 options:
 
-Выигрывает игрок, у которого сумма очков ближе к 21
-Если у игрока сумма очков больше 21, то он проиграл
-Сумма из банка игры переходит к выигравшему
-После окончания игры, спрашиваем у пользователя, хочет ли он сыграть еще раз. Если да, то игра начинается заново с раздачи карт, если нет - то завершаем работу.
+  - Skip. In this case, the move goes to the dealer (see below)
+
+  - Add a card. (only if the user has 2 cards on his hands). In this case, the player is added one more random card, the amount of points is recounted, the move goes to the dealer. Only one card can be added.
+
+  - View the maps. The cards of the dealer and the player are opened, the player sees the sum of the dealer's points, the game results are counted (see below). The progress of the dealer. The dealer can:
+
+  - Skip the move. The turn moves to the player. It is used if the sum of dealer points is above 18.
+
+  - Add a card. The dealer has a new card (for the user is closed). It is used if the sum of points is less than 18. After this, the motion passes to the player. Only one card can be added.
+
+  - Players open cards either when they reach 3 cards, or when the user selects the option "Open cards". After that, the user sees the dealer's cards and the number of his points, as well as the result of the game (who won and who lost).
+
+#### Calculation of results:
+
+  - The player who wins the points closer to 21 wins
+  - If the player has more than 21 points, he has lost
+  - The amount from the game bank goes to the winner
+  - After the end of the game, ask the user if he wants to play again.
+  - If so, then the game starts anew from the distribution of cards, if not, then we finish the work.
 
 [Back](https://github.com/niten2/test_tasks)

@@ -1,9 +1,9 @@
-- Сайт построенный на API. Например, напиши сайт-парсер какого-нибудь AirBnB или опять таки Avito, который по нужным запросам найдет и сформирует более детальный подбор товаров, отследит их среднюю цену и выдаст предложение выгоднее того, которое существует сейчас. Т.е. проанализирует данные лучше оригинала.
+- The site is built on the API. For example, write a website-parser of some AirBnB or again Avito, which, upon the necessary requests, will find and form a more detailed selection of goods, track their average price and give an offer more advantageous than that which exists now. Those. will analyze the data better than the original.
 
-- Аналог Yelp. Это пример типичного живого проекта, сайт с рейтингами и обзорами, возможность их писать, места на карте, фоточки, рейтинги, категории, поиск, даже API. Полный набор, очень хорошо научит понимать как писать проекты с рейтинговыми системами и работой с пользователями и их отзывами. И такое можно часто встретить на фрилансе, типа очередного подборщика ресторанов, аптек, фитнес центров.
+- Analogue of Yelp. This is an example of a typical live project, a site with ratings and reviews, the ability to write them, places on the map, photos, ratings, categories, search, even API. A full set very well will teach you how to write projects with rating systems and work with users and their feedback. And this can often be found on freelancing, such as the next pick-up of restaurants, pharmacies, fitness centers.
 
-- Типичный магазин-платформа (Avito). Ну тут всё очевидно, магазины не писал - жизнь прошла зря.
+- A typical platform store (Avito). Well, everything is obvious, the stores did not write - life was wasted.
 
-- Scrapers, parsers и прочие инструменты. Очень часто нужна в проектах, плюс узнаешь многое про работу с другими сайтами или их API.
+- Scrapers, parsers, and other tools. Very often you need it in projects, plus you learn a lot about working with other sites or their API.
 
 [Back](https://github.com/niten2/test_tasks)

@@ -1,31 +1,31 @@
 # Todo App
 
-- Приложение содержит две страницы: / и /admin
+  - The application contains two pages: / and / admin
 
-- На странице / отображается текущий курс доллара к рублю, известный приложению.
+  - The page / shows the current dollar-to-ruble exchange rate, known to the application.
 
-- Приложение фоновым скриптом периодически обновляет курс из любого выбранного вами доступного источника (сайт CBR, главная страница http://www.rbc.ru, и т.д.).
+  - The application by the background script periodically updates the course from any available source you choose (CBR site, main page http://www.rbc.ru, etc.).
 
-- При обновлении курса в приложении он обновляется на всех открытых в текущий момент страницах /.
+  - When updating the course in the application, it is updated on all currently open pages.
 
-- На странице /admin находится форма, содержащая поле для ввода числа, поле для ввода даты-времени и сабмит.
+  - On the / admin page there is a form containing a field for entering a number, a field for entering date-time and submitting.
 
-- При сабмите введенное число делается форсированным курсом до введённого времени, т.е. до этого времени реальный курс игнорируется, вместо него страницах / отображается форсированный курс.
+  - When submitting the entered number is done by the forced course before the entered time, i.e. before this time, the real course is ignored, instead of it, pages / show the forced rate.
 
-- Страница /admin «помнит» введенные предыдущий раз значения, они отображаются уже введенными при загрузке страницы.
+  - Page/admin "remembers" the values ​​entered the previous time, they are displayed already entered when the page is loaded.
 
-- При сабмите форсированного курса он, конечно же, cразу обновляется на всех открытых страницах /. При истечении времени действия форсированного курса на всех страницах начинает отображаться реальный курс.
+  - When submitting an accelerated course, it, of course, is immediately updated on all open pages. When the expiration time of the forced rate on all pages, the real rate begins to be displayed.
 
-- Форма содержит разумные валидации.
+  - The form contains reasonable validations.
 
-- Внешний вид приложения должен быть аккуратным в рамках разумного (например, использовать Twitter Bootstrap).
+  - The appearance of the application should be neat within the reasonable (for example, use Twitter Bootstrap).
 
-- Плюсом будет использование какого-либо JS-фреймворка на клиентской стороне.
+  - The advantage is the use of any JS-framework on the client side.
 
-- Web-приложение должно корректно работать в браузерах Firefox и Chrome последних версий.
+  - The Web application should work correctly in the Firefox and Chrome browsers of the latest versions.
 
-- Код должен быть покрыт тестами.
+  - The code must be covered with tests.
 
-- Все необходимое для локального запуска приложения должно быть оформлено в виде Procfile-а для Foreman.
+  - Everything you need to run the application locally must be in the form of Procfile for Foreman.
 
 [Back](https://github.com/niten2/test_tasks)

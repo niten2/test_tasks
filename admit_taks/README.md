@@ -1,8 +1,8 @@
-Сделать назначение программ обучения:
+Make the appointment of training programs:
 
-- администратор назначает группе пользователей и/или конкретным пользователям курсы и/или тесты, а они их проходят.
-- Все детали прорабатывать не надо, достаточно оперативно сделать ключевое, на Ваш взгляд, в этой задаче,
-- чтобы остальные члены команды могли доделать мелочи.
-- Задача должна быть реализована на Ruby on Rails (версия не важна) с использованием СУБД на выбор Sqlite, Postgres, Mysql.
+- The administrator assigns a group of users and/or specific users courses and/or tests, and they pass them.
+- It is not necessary to work out all the details, it is enough to quickly make a key, in your opinion, in this task,
+- so that the rest of the team can finish the trivia.
+- The task should be implemented in Ruby on Rails (version is not important) using DBMS to choose SQLite, Postgres, Mysql.
 
 [Back](https://github.com/niten2/test_tasks)

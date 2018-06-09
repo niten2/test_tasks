@@ -1,76 +1,78 @@
-# Test Task Ruby (Доска объявлений)
+# Test Task Ruby (Bulletin Board)
 
-## Пользовательская система:
+## User system:
 
-- Регистрация нового пользователя.
+  - New User Registration.
 
-- Состав профиля: login, full name, birthday, e­mail, address, city, state, country, zip, password и confirm password (все поля обязательны).
+  - The composition of the profile: login, full name, birthday, email, address, city, state, country, zip, password and confirm password (all fields are required).
 
-- Автоматическое определение местонахождение пользователя, после изменения полей
+  - Automatic location of the user, after changing the fields
 
-формы(address, city, state, zip, country) и отображние его на карте, на страницах
-редактирования профиля и регистрации. Использовать Google Map ver 3.
+  form (address, city, state, zip, country) and display it on a map, on pages
+  profile editing and registration. Use Google Map ver 3.
 
-- Редактирование профиля пользователя.
+  - Edit the user profile.
 
-- Восстановление пароля.
+  - Password recovery.
 
-- Просмотр профиля пользователя другими пользователями и отображать карту его
-местонахождения.
+  - View the profile of other users and display the map of it
+  location.
 
-- Реализовать возможность авторизации с помощью Twitter, Facebook или Google App
-(любой из них).
+  - Implement authorization with Twitter, Facebook or Google App
+  (any of them).
 
-## Система объявлений:
+## Ad System:
 
-- составлять/редактировать/удалять объявления пользователями;
+  - Compose / edit / delete ads by users;
 
-- добавлять/редактировать комментарии к объявлению пользователями;
+  - add/edit comments to the announcement by users;
 
-- сообщение включает поля: автор, текст, изображение;
+  - the message includes fields: author, text, image;
 
-- текст сообщения имеет разметку Textile, все остальные HTML теги блокируются(если было введен HTML тег, то его просто отобразить: пример, пользователь ввел "Hello *world*", то при просмотре сообщения увидит "Hello и выделенным жирным шрифтом слово "world");
+  - the text of the message has a Textile markup, all other HTML tags are blocked (if an HTML tag was entered, it simply displays: example, the user entered "Hello * world *", then when viewing the message, he sees "Hello and boldface word" world " );
 
-- комментировать объявления с использованием AJAX эффектов (не перегружать страницу при добавлении/удалении комментария);
+  - comment on ads using AJAX effects (do not overload the page when adding/removing comments);
 
-- удалять комментарий может только Администратор или Модератор, и сам автор;
-­ не авторизованный пользователь может только на просмотр объявлений и профилей
-пользователей;
+  - only the Administrator or the Moderator, and the author himself can delete the comment;
+  An unauthorized user can only view ads and profiles
+  users;
 
-- просмотр списка объявлений должен отображать thumbnail(уменьшенную картинку), автора и первые слова текста(до 160 символов; слова не должны быть обрезанные) ;
-- возможность поиска объявления по автору, контенту, адресу, тегам, тексту объявления.
+  - the list of ads should display a thumbnail, the author and the first words of the text (up to 160 characters, the words should not be cropped);
+  - the ability to search for ads by author, content, address, tags, text ads.
 
-## Система ролей:
+## Role system:
 
-- Ввести 3 роли: администратор, пользователь и модератор
+  - Enter 3 roles: administrator, user and moderator
 
-- Администратор: может управлять(добавлять,редактировать,удалять, устанавливать роли) пользователямию. Пользователь с правами администратора создается вручную из консоли или при миграции. Нужно указать как.
+  - Administrator: can manage (add, edit, delete, install roles) by the user. A user with administrative rights is created manually from the console or during migration. It is necessary to specify how.
 
-- Модератор: управляет всеми сообщениями и комментариями пользователей
+  - Moderator: manages all messages and user comments
 
-- Пользователь: может добавлять и редактировать свои сообщения(объявления и
-комментарии)
+  - User: can add and edit his messages (ads and
+  Comments)
 
-## Страницы:
-- На всех страницах есть возможность перейти на список пользователей, список объявлений, редактирования своего профиля, выхода из системы.
+## Pages:
 
-- Главная содержит список объявлений.
-  Просмотр объявления.
-  Авторизация.
-  Регистрация.
-  Профиль.
+  - On all pages, you can go to the user list, list of ads, edit your profile, log off.
 
-При выполнении тестового задания ОБЯЗАТЕЛЬНО:
-- Задеплоить приложение на Heroku
-- Выложить код на GitHub.
-- Применять https://github.com/styleguide/ruby
-- Применять https://github.com/polarmobile/coffeescript­style­guide
-- Использовать последнюю версию Rails (> 4.0.0)
-- Использовать Haml
-- Напишите модульные тесты.
-- Напишите интеграционные тесты
-- Желательно охватить тестами по крайней мере 90% приложения
-- Capybara поможет вам проверить веб­приложения путем имитации того, как реальный пользователь будет взаимодействовать с приложением.
-- Также подлючите приложение к Travis CI
+  - The home contains a list of ads.
+    View the ad.
+    Authorization.
+    Check-in.
+    Profile.
 
-[Back](https://github.com/niten2/test_tasks)
+When performing a test task, it is MANDATORY:
+
+  - Install the application on Heroku
+  - Put the code on GitHub.
+  - Apply https://github.com/styleguide/ruby
+  - Apply https://github.com/polarmobile/coffeescriptstyleguide
+  - Use the latest version of Rails (> 4.0.0)
+  - Use Haml
+  - Write unit tests.
+  - Write Integration Tests
+  - It is desirable to cover at least 90% of the application with tests
+  - Capybara helps you test your web applications by simulating how a real user will interact with the application.
+  - Also include the application to Travis CI
+
+[Back] (https://github.com/niten2/test_tasks)

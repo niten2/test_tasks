@@ -1,76 +1,48 @@
-# Краудсорсинговый новостной портал
+# News Portal
+---
 
-Суть: новостной сайт, где новости предлагают пользователи.
+1. Authorization of users
 
-1. Авторизация пользователей
+  - The user must be able to register, sign in and out of his account.
+  - When registering, the user in addition to the email indicates his display name.
+  - Registration is not required to view articles and write comments.
 
-Пользователь должен иметь возможность регистрироваться, входить и выходить из своего аккаунта.
-При регистрации пользователь помимо email указывает свое отображаемое имя.
-Регистрация не обязательна для просмотра статей и написания комментариев.
-Использовать гем devise.
+2. Articles
 
-2. Статьи
-- Зарегистрированный пользователь должен иметь возможность написать статью.
-- Статья состоит из: заголовка, анонса (краткое описание), тела статьи
-- В статье можно использовать разметку, вставлять картинки и видео с youtube. Это
-- делается с помощью Redactor.
-- Статьи относятся к категориям (политика, спорт, культура, ...). То есть, отношение
-- многие­ко­многим.
-- После создания статьи она ожидает модерации и не отображается на главной странице.
-- На главной странице должен быть выбор категории.
-- Статьи сортируются по дате создания (свежие­сверху).
-- Статьи должны разбиваться на страницы (kaminari или will_paginate).
+  - A registered user should be able to write an article.
+  - The article consists of: title, announcement (short description), article body
+  - In the article you can use markup, insert pictures and videos from youtube
+  - Articles refer to categories (politics, sport, culture, ...). That is, the attitude of many people.
+  - After creating an article, she expects moderation and is not displayed on the main page.
+  - The main page should have a category selection.
+  - Articles are sorted by date of creation (freshly top).
+  - Articles should be paginated.
 
-3. Комментарии
-- К статьям можно оставлять комментарии. К комментариям тоже можно оставлять
-- комментарии. Регистрация пользователя необязательна.
-- Рядом с комментарием должно указываться имя комментатора и время.
+3. Comments
 
- 4. Подписки
-- Зарегистрированный пользователь должен иметь возможность подписаться на новости
-- определенной категории. Если он это сделал, то ему на почту должны приходить письма
-- с анонсами статей и ссылкой на полную статью.
-- Пользователь должен иметь возможность отписаться от рассылки, перейдя по прямой
-- ссылке из письма. Должно работать, даже если пользователь не залогинен.
-- Рассылку нужно реализовать ориентированной на highload.
+  - You can leave comments to articles. Comments can also be posted to comments.
+  - Registration is not required to leave comments.
+  - Next, to the comment, specify the commenter's name and time.
 
-5. Админка
-- Некоторые пользователи являются админами.
-- Админ должен иметь возможность удалить любую статью или комментарий (для него
-- показывается ссылка на удаление около статьи/комментария).
-- Должна быть админка, реализованная с помощью ActiveAdmin.
-- Главная страница админки должна показывать: кол­во статей, кол­во зарегистрированных пользователей всего, кол­во зарегистрированных пользователей сегодня
-- Должен быть раздел управления статьями, где статью можно подтвердить, отклонить или удалить.
-- После подтверждения или отклонения статьи автор должен получить соответствующее письмо.
+4. Subscriptions
 
-6. Условия
-- Ruby On Rails 4
-- БД ­ postgresql, в том числе в development окружении
-- Код должен быть залит на github
-- Все письма в приложении должны отправляться
-- асинхронно (с помощью sidekiq)
-- Использовать bootstrap в качестве фронтэнд­фреймворка
-- Должен быть seed­файл, который создаст все необходимые объекты для тестирования
+  - A registered user must be able to subscribe to news of a certain category.
+  - If he did, then he should receive emails with announcements of articles and a link to the full article.
+  - The user should be able to unsubscribe from the mailing list by clicking on a direct link from the email. Should work even if the user is not logged in.
 
-### Бонусные задания
+5. The admin area
 
-- Полнотекстовый поиск статей с помощью Sphinx.
-- С подсветкой искомой части.
-- Авторизация пользователей через соц. сети через omniauth
-- Теги для статей с поиском статей по тегам
-- Предпросмотр статей перед созданием
-- Использовать в качестве шаблонизатора slim
-- Удаление статей и комментариев с помощью AJAX (для админа)
+  - Some users are administrators.
+  - The administrator should be able to delete any article or comment (for him, a link to the deletion near the article/comment is shown).
+  - The main page of the admin board should show: the number of articles, the number of registered users total, the number of registered users today
+  - There should be a section for managing articles where the article can be confirmed, rejected or deleted.
+  - After confirming or rejecting the article, the author should receive a corresponding letter.
 
-7. Выложить все это на Heroku и дать ссылку (в этом случае полнотекстовый поиск на продакшне можно отключить, т.к. на хероку он платный)
+6. AF
 
-### Оценивается:
-
-- Скорость реализации
-- Понимание ТЗ и выявление скрытых тонкостей
-- Внешний вид интерфейса
-- Качество кода и архитектуры
-- Читабельность кода и комментарии
-- Сделать бонусные задания круче, чем их не сделать, даже если на это уйдет больше времени
+  - Full-text search for articles using Sphinx. With the highlight of the desired part.
+  - Authorization of users through social. networks
+  - Tags for articles with articles search by tags
+  - Preview articles before creating
 
 [Back](https://github.com/niten2/test_tasks)

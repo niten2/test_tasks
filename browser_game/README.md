@@ -1,22 +1,39 @@
-# Многопользовательская браузерная игра.
+# Multiplayer browser game.
 
-- При входе на сайт игры пользователю необходимо ввести имя и пароль в специальном окне, либо зарегистрироваться.
-- Вошедшему пользователю должен быть виден список других игроков онлайн. Этот список должен обновляться «на лету» по мере входа пользователей на сайт или выхода.
-- Интерфейс должен быть на английском языке.
-- Пользователь создаёт лобби для двух участников и ожидает, когда другой пользователь к нему подключится. При создании лобби указывается его название.
-- Должен быть список созданных лобби. Должен отображаться текущий статус лобби: «набор
-- участников», «готово к запуску игры», «идёт игра» и т.д. Этот список также должен обновляться «на лету».
-- Присоединение к лобби осуществляется посредством выбора лобби из списка и подтверждением
-- действия. Как только в лобби набирается два участника, пользователь, создавший лобби, может запустить игру. Более двух участников в лобби находиться не может.
-- Игра представляет собой усовершенствованный вариант игры «камень-ножницы бумага». Правила - Камень, Ножницы, Бумага, Ящерица, Спок - правила из Теории Большого взрыва
-- Игра состоит из серии ходов (партий). Каждый ход определяет победителя партии. Игра ведётся до трёх побед.
-- Каждый из игроков выбирает одну из фигур. Ход противника отображается только после того, как он сам сделал ход.
-- Продолжительность хода должна быть настраиваемая (для удобства тестирования, эту настройку можно заложить в лобби), однако требуется стабильная работа при продолжительности хода в 5 секунд. Нужно отображать таймер хода. Если один из игроков не успел сделать ход, то он проигрывает текущий ход.
-- Есть возможность использовать подсказку один раз за игру: это возможность с 50% вероятностью определить как походил противник. Если противник ещё не сделал ход на момент использования подсказки, подсказка сгорает.
-- Должна вестись история ходов. Каждый игрок также должен иметь возможность видеть в истории, когда им или его противником была задействована подсказка.
-- Пользователи могут покидать лобби в любой момент, даже после запуска игры. Пользователь, покинувший лобби в ходе игры, получает автоматическое поражение, и не может вступать ни в какие лобби в течение минуты с момента покидания игры.
-- Интерфейс должен быть удобным.
-- Использовать Comet-технологии.
-- Реализовать с применением MVC-паттерна.
+  - At the entrance to the game site, the user must enter a name and password in a special window, or register.
+
+  - The logged on user should be able to see a list of other online players. This list should be updated "on the fly" as users enter the site or exit.
+
+  - The interface should be in English.
+
+  - The user creates a lobby for two participants and waits for another user to connect to it. When creating a lobby, its name is indicated.
+
+  - There must be a list of created lobbies. The current status of the lobby should be displayed: "set
+
+  - participants "," ready to launch the game "," there is a game ", etc. This list should also be updated "on the fly."
+
+  - Attach to the lobby by choosing a lobby from the list and confirming
+
+  - actions. As soon as two members enter the lobby, the user who created the lobby can start the game. More than two participants in the lobby cannot be.
+
+  - The game is an improved version of the game "stone-scissors paper". Rules - Stone, Scissors, Paper, Lizard, Spock - rules from The Big Bang Theory
+
+  - The game consists of a series of moves (parties). Each turn determines the winner of the game. The game is played up to three wins.
+
+  - Each player chooses one of the pieces. The opponent's move is displayed only after he made the move.
+
+  - The duration of the stroke should be customizable (for ease of testing, this setting can be laid in the lobby), but it requires a stable operation with a duration of 5 seconds. It is necessary to display the stroke timer. If one of the players does not have time to make a move, then he loses the current move.
+
+  - It is possible to use the hint once per game: this is an opportunity with 50% probability to determine how the opponent was like. If the opponent has not made a move at the time of using the tooltip, the prompt is burned.
+
+  - There must be a history of moves. Each player should also be able to see in the story when a hint was activated by him or his opponent.
+
+  - Users can leave the lobby at any time, even after starting the game. A user who leaves the lobby during the game receives an automatic defeat, and cannot enter any lobby within a minute of leaving the game.
+
+  - The interface should be convenient.
+
+  - Use Comet-technology.
+
+  - Implement using MVC-pattern.
 
 [Back](https://github.com/niten2/test_tasks)

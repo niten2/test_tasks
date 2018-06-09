@@ -1,58 +1,58 @@
-# Тестовое задание RoR
-# Задача
+# RoR test task
+# A task
 
-Разработать прототип системы складского учета,
-в которой фиксируется
-- учет,
-- прибытие,
-- убытие товаров на складе.
+Develop a prototype warehouse accounting system,
+in which the
+- accounting,
+- arrival,
+- the departure of goods in the warehouse.
 
-Платформа разработки: Ruby on Rails.
+Development platform: Ruby on Rails.
 
-Характеристики груза
+Cargo characteristics
 
-## Каждый тип груза хранимый на складе имеет следующие характеристики:
+## Each type of cargo stored in a warehouse has the following characteristics:
 
-- Название
-- Вес одного ящика (в килограммах)
-- № Ангара где будет производится хранение
+- Title
+- The weight of one box (in kilograms)
+- No Angara where storage will be carried out
 
-## Роли пользователей и функционал
+## User roles and functionality
 
-В системе должно быть представлено 3 роли пользователей:
+The system should have 3 user roles:
 
-### Поставщик товара.
-- Вносит информацию о новых поставках грузов (без возможности дальнейшего редактирования\удаления),
-- Обязательно указывает типА поставляемого груза и количества ящиков (в штуках).
+### Supplier of the goods.
+- Introduces information about new shipments of goods (without the possibility of further editing/removal),
+- The Type A of the shipment and the number of boxes (in units) is mandatory.
 
-### Оптовик.
-- Видит информацию о текущем остатке (кол-во ящиков) по каждому типу груза.
-- Производить забор необходимого количества ящиков груза любого типа со склада, уменьшая тем самым его доступный остаток.
+### Wholesaler.
+- See information about the current balance (number of boxes) for each type of cargo.
+- To take the necessary number of drawers of any type of cargo from the warehouse, thereby reducing its available balance.
 
-### Администратор системы. Имеет возможность использовать следующий функционал:
-- Видеть полную историю всех операций поставки и забора грузов с указанием точной даты и времени.
-- Видеть информацию о текущих остатках.
-- Создавать новые типы грузов, которые затем могут использоваться остальными пользователями системы.
-- Видеть общую массу всех грузов, хранимых в каждом ангаре
+### The system administrator. Has the opportunity to use the following functional:
+- See the complete history of all delivery and pick-up operations with an exact date and time.
+- See information about current balances.
+- Create new types of cargo, which can then be used by other users of the system.
+- See the total weight of all cargo stored in each hangar
 
-## Пример
+## Example
 
-Имеется категория грузов:
+There is a category of goods:
 
-Телефон Vertu
-- Масса 10 кг
-- Ангар №5.
+Vertu phone
+- Weight 10 kg
+- Hangar # 5.
 
-Поставщик «Скоровоз» вносит на склад следующий товар:
+The supplier "Skorokvoz" brings the following goods to the warehouse:
 
-- Категория груза «Телефон Vertu»
-- Количество: 17 ящиков
+- Cargo category "Vertu phone"
+- Quantity: 17 boxes
 
-Оптовик «Селлер» берет со склада:
-- Категория «Телефон Vertu»
-- Количество: 10 ящиков
+Wholesaler "Seller" takes from the warehouse:
+- Category "Vertu phone"
+- Quantity: 10 boxes
 
-После этого Администратор авторизуется в системе и видит следующую информацию:
+After that, the Administrator is authorized in the system and sees the following information:
 
 ![image](https://github.com/niten2/test_tasks/blob/master/stock/image.png)
 

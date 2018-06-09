@@ -2,98 +2,69 @@
 
 Example: https://github.com/niten2/tutu_clone
 
-## В процессе были выполнить следующие действия:
+In the process, the following actions were performed:
 
-Создал ресурс Маршруты (Routes), для которого возможны все CRUD-операции.
+  - Created a resource Routes (Routes), for which all CRUD-operations are possible.
+  - The route has a name, there is a validation for the presence of this attribute.
+  - Model The route has a lot of stations. A station can belong to multiple routes.
+  - A train can have one route, on one route there can be several trains
+  - The ticket contains information about (associated with) the train, the starting and ending stations. The ticket belongs to the user.
+  - The user can have any number of tickets.
+  - The train contains information about tickets to it.
+  - Implemented a user interface for creating routes and adding stations to it.
 
-Маршрут имеет название, есть валидация на наличие этого атрибута.
+  - A list of stations is derived using anonymous partials. The same is done for the list of trains.
 
-Модель Маршрут имеет множество станций. Станция может принадлежать множеству маршрутов.
+  - Through layout, a footer containing information about the author has been added to all pages.
 
-Поезд может иметь один маршрут, на одном маршруте может быть несколько поездов
+  - Created interface for creating / deleting / changing routes.
 
-Билет содержит информацию о (связан с) поезде, начальной и конечной станциями. Билет принадлежит пользователю.
+  - From the interface, you can assign a route to the train from the list of available routes.
 
-Пользователь может иметь произвольное кол-во билетов.
+  - When viewing a train, you can see its route or the value "Route not assigned"
 
-Поезд содержит информацию о билетах на него.
+  - When viewing the route, a list of trains on this route is displayed.
 
-Реализован пользовательских интерфейс для создания маршрутов и добавления станций в него.
+  - Implemented the ability to control cars: When adding a car indicated by the train to which it is added Car type (compartment / reserved seat) Seats: Lower / Upper
 
-Сделан вывод списка станций, используя анонимные partials. Сделано то же самое для списка поездов.
+  - When viewing a train, information is displayed on the number of wagons: Placard / Coupe and number of seats: Placard top / bottom, Cup top / bottom.
 
-Через layout добавлены на все страницы футер, содержащий информацию об авторе.
+  - The interface for viewing the list of sold tickets was implemented. You can perform all standard CRUD operations with tickets.
 
-Создан интерфейс для создания/удаления/изменения маршрутов.
+  - When creating (or editing) a ticket, you must specify the starting and ending stations, as well as the passenger's full name (without association with the User model)
 
-Из интерфейса есть возможность назначать маршрут поезду из списка доступных маршрутов.
+  - Added the ability to specify the station serial number in the route (sorting field). It was considered that the same station can enter different routes and have a different sequence number in different routes.
 
-При просмотре поезда, видно его маршрут или значение “Маршрут не назначен”
+  - Output a list of stations in the route by the order number (used scope)
 
-При просмотре маршрута выводится список поездов на этом маршруте.
+  - Implemented through STI the following types of cars: Kupeyny (has top and bottom seats), reserved seat (has upper / lower seats + side upper and lower), CB (only bottom seats), Seated (has only seats)
 
-Реализована возможность управления вагонами: При добавлении вагона указывается поезд, к которому он добавляется Тип вагона (купейный/плацкартный) Кол-во мест: Нижних / Верхних
+  - When adding a car to the train, the car is automatically assigned a serial number (used by the callbacks). The uniqueness of the wagon's number at the train is checked. There can be no situation when the train has 2 cars with the number 11.
 
-При просмотре поезда, отображается информация о кол-ве вагонов: Плацкартных / Купейных и кол-ве мест: Плацкартных верхних/нижних, Купейных верхних/нижних.
+  - On the train viewing page, a list of the numbers of the cars (as links) was displayed. When you click on a link to a particular car, show the type of the car and the actual information on it (the number of top / bottom seats, if there is - side, etc. depending on the type of car)
 
-Реализован интерфейс просмотра списка проданных билетов. Можно выполнять все стандартные CRUD операции с билетами.
+  - The train made a flag - sorting the car. Values: from the head / c of the train's tail. If the option "from the head of the train" is chosen, the cars on the train page are displayed in direct order, if "from the tail of the train" - in the opposite.
 
-При создании (или редактировании) билета нужно указать начальную и конечную станции, а также ФИО пассажира (без ассоциации с моделью User)
+  - Using the AR Query Interface, implemented the method in the Train model, which takes as the argument the type of the car and the type of seats (top / bottom / passages) and returns their total number for the train (ie counts for all cars of the specified type).
 
-Добавил возможность указать порядковый номер станции в маршруте (поле для сортировки). Учел, что одна и та же станция может входить в разные маршруты и иметь разный порядковый номер в разных маршрутах.
+  - Sorting stations in the route is implemented.
 
-Вывести список станций в маршруте по порядковому номеру (использовал скоуп)
+  - Changed the addition of wagons to the attached resources.
 
-Реализовал через STI следующие типы вагонов: Купейный (имеет верхние и нижние места), Плацкартный (имеет верхние/нижние места + боковые верхние и нижние), СВ (имеет только нижние места), Сидячий (имеет только сидячие места)
+  - Added arrival and departure times for each station in the route
 
-При добавлении вагона к поезду, автоматически назначается вагону порядковый номер (использовал коллбеки). Проверяется уникальность номера вагона у поезда. Не может быть ситуации, когда у поезда 2 вагона с номером 11.
+  - I made a page for finding train tickets:
 
-На странице просмотра поезда вывел список номеров вагонов (как ссылки). При переходе по ссылке на конкретный вагон показывать тип вагона и актуальную информацию по нем (кол-во верхних/нижних мест, если есть - боковые и т.п. в зависимости от типа вагона)
+  - The user selects the start and end stations from the list. You can choose from all the stations that are in the system. The system produces routes in the chosen direction and provides the user with a list of trains that follow this route. The user sees the departure time from the initial station and the arrival time on the final station. The user has the opportunity to "buy" a train ticket. This is the "Buy" button next to the corresponding train. When you click on it, the passenger's name for the ticket is requested, the passport data and a ticket is created that is associated with the user and contains the required information, after which the ticket is shown to the user. Implemented a "purchase" ticket through the attached resources (resource ticket is embedded in the resource user).
 
-У поезда сделал флаг - сортировка вагона. Значения: с головы/c хвоста поезда. Если выбран вариант “с головы поезда”, то вагоны на странице поезда выводятся в прямом порядке, если “с хвоста поезда” - в обратном.
+  - Connect authentication through Device
 
-Используя AR Query Interface, реализовал метод в модели Train, который принимает в качестве аргумента тип вагона и тип мест (верхние/нижние/cидячие) и вовзращает их общее кол-во для поезда (т.е. считает по всем вагонам указанного типа).
+  - I divided the application into a user and administrative part. Only users with administrative rights can access the administrative part.
 
-Реализована сортировка станций в маршруте.
+  - When buying a ticket, the ticket is bound to the user who has bought it (logged in), while the user id is not transmitted in the query parameters or form fields, incl. hidden
 
-Изменил добавление вагонов на вложенные ресурсы.
+  - A logged-in user can view a list of all his purchased tickets, each ticket separately, and also remove the ticket
 
-Добавил время прибытия и отправления для каждой станции в маршруте
+  - The administrator can view the list of all tickets in the system, each individually, edit tickets and delete them.
 
-Сделал страницу поиска билетов на поезд:
-
-Пользователь выбирает из списка начальную и конечную станцию. Выбирает можно из всех станций, которые есть в системе. Система произвоидт поиск маршрутов по выбранному направлению и предоставляет пользователю список поездов, которые следуют по данному маршруту. Пользователь видит время отправления от начальной станции и время прибытия на конечную. У пользователя есть возможность “купить” билет на поезд. Это кнопка “Купить” рядом с соответсвующим поездом. При нажатии на нее, запрашивается ФИО пассажира для билета, данные паспорта и создается билет, связанный с пользователем и содержащий нужную информацию, после чего билет показывается пользователю. Реализована “покупка” билета через вложенные ресурсы (ресурс билет вложен в ресурс пользователь).
-
-Подключил аутентификацию через Devise
-
-Разделил приложение на пользовательскую и административную части. В административную часть имеет доступ только пользователи с правами администратора.
-
-При покупке билета, билет привязыватется к купившему его пользователю (залогиненному), при этом, id пользователя не передается в параметрах запроса или полях формы, в т.ч. скрытых
-
-Залогиненный пользователь может посмотреть список всех своих купленных билетов, каждый билет в отдельности, а также удалить билет
-
-Администратор может просматривать список всех билетов в системе, каждый в отдельности, редактировать билеты и удалять их.
-
-При регистрации пользователя запрашивается его имя и фамилию и после входа, выводится “Привет, <имя пользователя>!”
-
-После успешного входа, перенаправляются обычные пользователи на страницу поиска билетов, а админов - на страницу, где перечислены ссылки на управление ресурсами приложения
-
-Добавил локализацию devise в проект, локализовал сообщения об ошибках, локализовал все формы в приложении.
-
-Добавил Twitter Bootstrap, стилизовал внешний вид приложения.
-
-Добавил индексы на все внешние ключи и другие поля, по которым происходит поиск в БД
-
-Реализовал отправку письма пользователю при покупке билета
-
-Реализовал просмотр списка билетов, купленных пользователем
-
-Реализовал возможность отмены покупки билета. Если пользователь купил билет, то он может удалить его на странице просмотра списка билетов.
-
-При отмене покупки билета, пользователю высылается уведомление об этом на email.
-
-Развернул приложение на heroku.
-
-В проекте использовать: Devise, паттерн проектирования STI, отправку сообщений пользователю.
-
-[Back](https://github.com/niten2/test_tasks)
+  - When registering the user, his name and surname are requested and after login, "Hello, <username>!"

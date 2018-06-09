@@ -1,104 +1,104 @@
 # TEST REST API
 
-Пример кода: https://github.com/niten2/test_task_api
+Sample code: https://github.com/niten2/test_task_api
 
-## Требования:
+## Requirements:
 
-Нужны модели:
+We need models:
 
-Post -- записи в блоге,
-поля:
-  title -- строковое
-  body -- строковое
-  author -- ссылка на автора
-  published_at: дата-время размещения записи
+Post - blog entries,
+fields:
+  title - string
+  body - string
+  author - link to the author
+  published_at: date-time of posting
 
-  Поля title и body -- обязательные для заполнения
+  Title and body fields are required
 
-Comment -- комментарии
-поля:
-  body -- строковое
-  author -- ссылка на автора
-  published_at: дата-время размещения коментария
+Comment - Comments
+fields:
+  body - string
+  author - link to the author
+  published_at: date-time of posting a comment
 
-  Поле body -- обязательное для заполнения
+  Body is the required field
 
-Поскольку у нас есть авторы, нужна модель в которой мы будем их хранить
+Since we have authors, we need a model in which we will store them
 
-User -- пользователи
-поля:
-  nickname:
-  email:
-  password:
+User - Users
+fields:
+  nickname:
+  email:
+  password:
 
-Реализовать эндпойнт по авторизации. Как его сделать up to you.
+Implement an endpoint for authorization. How to make it up to you.
 
-Реализовать эндпойнты:
+Implement endpoints:
 POST /api/v1/posts.json
-  отправляем:
-    title
-    body
-    published_at
+  we send:
+    title
+    body
+    published_at
 
-  в ответ получаем json с полями
-    id
-    title
-    body
-    published_at
-    author_nickname
+  in the answer, we receive json with fields
+    id
+    title
+    body
+    published_at
+    author_nickname
 
-  если в запросе не передали published_at, то нужно подставлять текущий момент времени.
+  If you did not pass the published_at in the request, you need to substitute the current time.
 
-  если передали не все поля, то ответ должен содержать одно поле
-    errors -- массив ошибок
+  If not all fields have been transmitted, then the response must contain one field
+    errors - an array of errors
 
 GET /api/v1/posts/:post_id.json
-  получить post по его id
+  get a post on his id
 
-  поля в ответе как в эндпойнте POST /api/v1/posts.json
+  fields in the response as in the endpoint POST /api/v1/posts.json
 
 GET /api/v1/posts.json
-  отправляем:
-    page
-    per_page
+  we send:
+    page
+    per_page
 
-  получаем список записей отсортированных полю published_at по убыванию
-  поля каждой записи как в эндпойнте POST /api/v1/posts.json
+  get the list of records sorted by the field published_at descending
+  fields of each entry as in the endpoint POST /api/v1/posts.json
 
-  В заголовках ответа нужно передать общее количество страниц и записей
+  In the response headers, you need to transfer the total number of pages and records
 
-Эндпойнты для комментариев можно не делать
+Endpoints for comments cannot be made
 
-Прочие требования:
-  код приложения ruby on rails 4.2.6
-  СУБД -- Postgresql 9.4
-  Для генерации json использовать jbuilder
-  В таблицах нужно указывать все необходимые индексы
-  Код моделей и контроллеров нужно покрыть тестами.
-  Для тестирования использовать rspec 3.4
-  Так же нужно упаковать приложение в docker образ,  так что приложение должно получать данные для соединения с базой данных через переменные окружения
+Other requirements:
+  application code ruby ​​on rails 4.2.6
+  DBMS - Postgresql 9.4
+  To generate json, use JBuilder
+  In tables, you need to specify all the required indexes
+  The code for models and controllers needs to be covered with tests.
+  For testing use RSpec 3.4
+  You also need to package the application in the docker image, so the application must receive the data to connect to the database through the environment variables
 
-Часть 2.  Сделать аналитический отчёт.
+Part 2. Make an analytical report.
 
 POST /api/v1/reports/by_author.json
-  start_date -- начало интервала
-  end_date -- конец интервала
-  email -- куда отправить отчёт
+  start_date - the start of the interval
+  end_date - end of the interval
+  email - where to send the report
 
-ответ:
-  поля: message: “Report generation started”
+answer:
+  fields: message: "Report generation started"
 
-Эндпойнт добавляет задачу на генерацию отчёта в очередь, очередь обрабатывается отдельным процесом. Готовый отчёт отправляется на email указанный в задаче.
+Endpoint adds the task to generate the report in the queue, the queue is processed by a separate process. The finished report is sent to the email specified in the task.
 
-Отчёт должен представлять собой таблицу со столбцами:
-  nickname,
-  email,
-  количество записей за период,
-  количество комментариев за период.
+The report should be a table with columns:
+  nickname,
+  email,
+  the number of entries for the period,
+  the number of comments for the period.
 
-Строки в отчёте отсортированы по значению вычисляемому так (количество постов + количество комментариев/10).
-Таблицу можно оформить как в виде html таблицы так и при помощи ASCII символов.
-Для этого задания нужно заполнить базу тестовыми данными использовать gem faker.
-Результат нужно разместить на github.
+The lines in the report are sorted by the value calculated so (number of posts + number of comments / 10).
+The table can be designed as an HTML table or using ASCII characters.
+For this task, you need to fill the database with test data using gem faker.
+The result should be placed on GitHub.
 
 [Back](https://github.com/niten2/test_tasks)
