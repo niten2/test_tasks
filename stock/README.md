@@ -1,15 +1,12 @@
-# RoR test task
-# A task
+# Stock Site
 
 Develop a prototype warehouse accounting system,
 in which the
-- accounting,
-- arrival,
-- the departure of goods in the warehouse.
+- accounting
+- arrival
+- the departure of products in the warehouse
 
-Development platform: Ruby on Rails.
-
-Cargo characteristics
+# Cargo characteristics #
 
 ## Each type of cargo stored in a warehouse has the following characteristics:
 
